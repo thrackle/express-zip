@@ -1,0 +1,38 @@
+{
+  "name": "express-zip",
+  "description": "stream multiple files to the browser as a single zip, in pure node.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Craig McDonald (thrackle)",
+    "email": "oss@thrackle.com"
+  },
+  "dependencies": {
+    "async": "~0.1.22",
+    "zipstream": "~0.2.1"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "chai": "*",
+    "superagent": "*",
+    "express": "2"
+  },
+  "keywords": [
+    "express",
+    "zip",
+    "native",
+    "stream",
+    "create"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/thrackle/express-zip"
+  },
+  "main": "index",
+  "engines": {
+    "node": "0.6 || 0.8"
+  },
+  "scripts": {
+    "test": "mocha",
+    "prepublish": "make test"
+  }
+}
