@@ -3,9 +3,8 @@
 express-zip allows you to do `res.zip(files)` in [express](http://expressjs.com/), without creating any intermediary files on disk, and in 100% pure node. [![build status](https://secure.travis-ci.org/thrackle/express-zip.png)](http://travis-ci.org/thrackle/express-zip)
 
 ```js
-var express = require('express');
+var app = require('express')();
 var zip = require('express-zip');
-var app = express();
 
 app.get('/', function(req, res) {
   res.zip([
