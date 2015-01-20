@@ -1,7 +1,7 @@
 var express = require("express")
   , request = require("superagent")
   , zip = require("../")
-  , app = express.createServer()
+  , app = express()
   , expect = require("chai").expect;
 
 app.get("/test/1", function(req, res) {
@@ -26,13 +26,7 @@ describe('express-zip', function() {
   });
 
   it('should extend res.zip', function() {
-    if (express.version.match(/^2\.[0-9]+\.[0-9]+$/)) {
-      // express 2.x
-      expect(require('http').ServerResponse.prototype.zip).to.be.a('function');
-    } else {
-      // express 3.x
-      expect(require('express').response.zip).to.be.a('function');
-    }
+    expect(require('express').response.zip).to.be.a('function');
   });
 });
 
