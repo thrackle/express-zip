@@ -23,7 +23,7 @@ app.listen(3000);
 ## Credits
 
 Borrows heavily from nulltask's [express-csv](https://github.com/nulltask/express-csv), uses
-Antoine van Wel's [zipper](https://github.com/wellawaretech/node-zipstream) for the actual zipping.
+ctalkington's [zip-stream](https://github.com/ctalkington/node-zip-stream) for the actual zipping.
 
 ## License
 
