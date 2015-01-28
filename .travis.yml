@@ -1,3 +1,5 @@
+install: make
+script: make test
 language: node_js
 node_js:
   - 0.8
