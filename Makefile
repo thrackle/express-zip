@@ -1,7 +1,10 @@
+build:
+	@npm install
+
 test:
 	npm test
 
 publish:
 	npm test && npm publish
 
-.PHONY: test publish
+.PHONY: build test publish
