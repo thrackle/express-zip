@@ -1,0 +1,6 @@
+{
+  "name": "express3-factory",
+  "dependencies": {
+    "express": "~4.11.1"
+  }
+}
