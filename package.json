@@ -14,7 +14,7 @@
     "mocha": "*",
     "chai": "*",
     "superagent": "*",
-    "express": ">=3.0.0"
+    "express": "2"
   },
   "keywords": [
     "express",
