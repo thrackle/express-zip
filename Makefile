@@ -2,9 +2,9 @@ build:
 	@npm install
 
 test:
-	npm test
+	@mocha
 
-publish:
-	npm test && npm publish
+publish: test
+	npm publish
 
 .PHONY: build test publish

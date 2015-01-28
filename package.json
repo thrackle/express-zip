@@ -32,7 +32,6 @@
     "node": ">= 0.8"
   },
   "scripts": {
-    "test": "mocha",
-    "prepublish": "make test"
+    "test": "make test"
   }
 }
