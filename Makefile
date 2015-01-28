@@ -1,7 +1,13 @@
+build:
+	@npm install
+	@cd test/express-factory/2; npm install --loglevel error
+	@cd test/express-factory/3; npm install --loglevel error
+	@cd test/express-factory/4; npm install --loglevel error
+
 test:
-	npm test
+	@mocha
 
-publish:
-	npm test && npm publish
+publish: test
+	npm publish
 
-.PHONY: test publish
+.PHONY: build test publish
