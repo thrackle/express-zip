@@ -1,3 +1,8 @@
+2.1.0 / 2015-06-18
+==================
+
+  * Add ability to pass text content other than a file path
+
 2.0.0 / 2015-01-27
 ==================
 

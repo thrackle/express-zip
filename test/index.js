@@ -28,6 +28,13 @@ function testExpressVersion(version) {
         ], 'test2.zip');
       });
 
+      app.get('/test/3', function(req, res) {
+        res.zip([
+          { content: 'text content', name: 'data1.txt' },
+          { content: 'more text', name: 'data2.txt' }
+        ], 'test3.zip');
+      });
+
       server = app.listen(8383)
     })
 
