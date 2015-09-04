@@ -1,7 +1,7 @@
 var expressFactory = require('./express-factory');
 var request = require('superagent');
 var zip = require('../');
-var expect = require('chai').expect;
+var should = require('should');
 
 testExpressVersion(2)
 testExpressVersion(3)
@@ -36,7 +36,8 @@ function testExpressVersion(version) {
         request
           .get('http://127.0.0.1:8383/test/1')
           .end(function(err,res) {
-            expect(res.headers['content-type']).to.match(/^application\/zip/);
+            should.exist(res);
+            res.headers['content-type'].should.match(/^application\/zip/);
             done();
           });
       });
@@ -45,7 +46,8 @@ function testExpressVersion(version) {
         request
           .get('http://127.0.0.1:8383/test/1')
           .end(function(err,res) {
-            expect(res.headers['content-disposition']).to.match(/^attachment; filename="attachment.zip"/);
+            should.exist(res);
+            res.headers['content-disposition'].should.match(/^attachment; filename="attachment.zip"/);
             done();
           });
       });
@@ -54,7 +56,8 @@ function testExpressVersion(version) {
         request
           .get('http://127.0.0.1:8383/test/2')
           .end(function(err,res) {
-            expect(res.headers['content-disposition']).to.match(/^attachment; filename="test2.zip"/);
+            should.exist(res);
+            res.headers['content-disposition'].should.match(/^attachment; filename="test2.zip"/);
             done();
           });
       });
