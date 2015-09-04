@@ -12,7 +12,6 @@
   },
   "devDependencies": {
     "mocha": "*",
-    "chai": "*",
     "superagent": "*",
     "express": "2"
   },
