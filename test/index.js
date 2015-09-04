@@ -35,7 +35,7 @@ function testExpressVersion(version) {
       it('should response valid content-type', function(done) {
         request
           .get('http://127.0.0.1:8383/test/1')
-          .end(function(res) {
+          .end(function(err,res) {
             expect(res.headers['content-type']).to.match(/^application\/zip/);
             done();
           });
@@ -44,7 +44,7 @@ function testExpressVersion(version) {
       it('should response valid content-disposition', function(done) {
         request
           .get('http://127.0.0.1:8383/test/1')
-          .end(function(res) {
+          .end(function(err,res) {
             expect(res.headers['content-disposition']).to.match(/^attachment; filename="attachment.zip"/);
             done();
           });
@@ -53,7 +53,7 @@ function testExpressVersion(version) {
       it('can pass filename', function(done) {
         request
           .get('http://127.0.0.1:8383/test/2')
-          .end(function(res) {
+          .end(function(err,res) {
             expect(res.headers['content-disposition']).to.match(/^attachment; filename="test2.zip"/);
             done();
           });
