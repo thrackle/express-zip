@@ -20,6 +20,21 @@ app.listen(3000);
 
     $ npm install express-zip
 
+## Full API
+
+```js
+/**
+ * Respond with a ZIP attachment containting `files`, with an optional
+ * "save as" `filename` (default is attachment.zip), and then call `cb`
+ * when finished.
+ *
+ * @param {Array} files { name: <name>, path: <path> }
+ * @param {String|Function} filename that will be shown in "save as" dialog
+ * @param {Function} cb(err, bytesZipped) optional
+ */
+res.zip = function(files, filename, cb) {
+```
+
 ## Credits
 
 Borrows heavily from nulltask's [express-csv](https://github.com/nulltask/express-csv), uses
