@@ -11,9 +11,9 @@
     "zip-stream": "0.5.0"
   },
   "devDependencies": {
-    "mocha": "*",
-    "chai": "*",
-    "superagent": "*",
+    "mocha": "2.1.0",
+    "chai": "1.10.0",
+    "superagent": "0.21.0",
     "express": "2"
   },
   "keywords": [
