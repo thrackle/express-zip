@@ -1,3 +1,8 @@
+2.0.1 / 2016-06-18
+==================
+
+  * Fix calling of `cb`, which broke after switching to `zip-stream`
+
 2.0.0 / 2015-01-27
 ==================
 
