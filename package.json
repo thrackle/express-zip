@@ -1,33 +1,42 @@
 {
   "name": "express-zip",
   "description": "stream multiple files to the browser as a single zip, in pure node.",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "author": {
     "name": "Craig McDonald (thrackle)",
     "email": "oss@thrackle.com"
   },
-  "contributors": [{
-    "name": "Tan Li Hau",
-    "url": "https://github.com/tanhauhau"
-  }, {
-    "name": "Vihang Mehta",
-    "url": "https://github.com/vihangm"
-  }, {
-    "name": "Eugene Lynch",
-    "url": "https://github.com/data-doge"
-  }, {
-    "name": "Paul Spicer",
-    "url": "https://github.com/pdspicer"
-  }],
+  "contributors": [
+    {
+      "name": "Tan Li Hau",
+      "url": "https://github.com/tanhauhau"
+    },
+    {
+      "name": "Vihang Mehta",
+      "url": "https://github.com/vihangm"
+    },
+    {
+      "name": "Eugene Lynch",
+      "url": "https://github.com/data-doge"
+    },
+    {
+      "name": "Paul Spicer",
+      "url": "https://github.com/pdspicer"
+    },
+    {
+      "name": "Felix Franz",
+      "url": "https://github.com/Felix-Franz"
+    }
+  ],
   "dependencies": {
     "async": "0.9.0",
-    "zip-stream": "0.5.0"
+    "zip-stream": "^2.0.1"
   },
   "devDependencies": {
-    "mocha": "2.1.0",
     "chai": "1.10.0",
-    "superagent": "0.21.0",
-    "express": "2"
+    "express": "^4.16.4",
+    "mocha": "^5.2.0",
+    "superagent": "^4.0.0"
   },
   "keywords": [
     "express",

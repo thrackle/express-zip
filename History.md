@@ -1,3 +1,11 @@
+2.0.2 / 2018-12-20
+==================
+
+  * Updated deprecated dependencies
+  * Removed test for express 2.x
+  * Added Felix Franz as Contributor
+  * Updated Readme: Added supported express versions
+
 2.0.1 / 2016-06-18
 ==================
 

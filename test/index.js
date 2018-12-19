@@ -3,7 +3,7 @@ var request = require('superagent');
 var zip = require('../');
 var expect = require('chai').expect;
 
-testExpressVersion(2)
+// testExpressVersion(2)  // DEPRICATED
 testExpressVersion(3)
 testExpressVersion(4)
 
