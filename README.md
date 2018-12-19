@@ -16,6 +16,8 @@ app.get('/', function(req, res) {
 app.listen(3000);
 ```
 
+Currently only express 3.x and 4.x is supported.
+
 ## Installation
 
     $ npm install express-zip
