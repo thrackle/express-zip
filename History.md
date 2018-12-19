@@ -5,6 +5,7 @@
   * Removed test for express 2.x
   * Added Felix Franz as Contributor
   * Updated Readme: Added supported express versions
+  * Added newer node versions to travis-ci
 
 2.0.1 / 2016-06-18
 ==================
