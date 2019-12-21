@@ -5,7 +5,7 @@ build:
 	@cd test/express-factory/4; npm install --loglevel error
 
 test:
-	@mocha
+	@./node_modules/mocha/bin/mocha
 
 publish: test
 	npm publish
