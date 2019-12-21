@@ -21,7 +21,7 @@
   }],
   "dependencies": {
     "async": "0.9.2",
-    "zip-stream": "0.5.2"
+    "zip-stream": "^2.1.2"
   },
   "devDependencies": {
     "mocha": "2.1.0",
