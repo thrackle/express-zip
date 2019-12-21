@@ -1,6 +1,6 @@
 {
   "name": "express3-factory",
   "dependencies": {
-    "express": "~4.11.1"
+    "express": "^4.17.1"
   }
 }
