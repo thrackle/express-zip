@@ -1,6 +1,6 @@
 {
   "name": "express2-factory",
   "dependencies": {
-    "express": "2"
+    "express": "4"
   }
 }
