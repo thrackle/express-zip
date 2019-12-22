@@ -1,3 +1,8 @@
+2.0.2 / 2019-12-21
+==================
+
+  * Bump dependencies to max avail for supported node versions (next release will drop node versions that are end of life)
+
 2.0.1 / 2016-06-18
 ==================
 
