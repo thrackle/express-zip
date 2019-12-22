@@ -28,6 +28,13 @@ function testExpressVersion(version) {
         ], 'test2.zip');
       });
 
+      app.get('/test/3', function(req, res) {
+        res.zip([
+          { path: __dirname + '/zip_contents/data1.txt', name: 'data1.txt' },
+          { path: __dirname + '/zip_contents/data2.txt', name: '/zip_contents/data2.txt' }
+        ], 'unicode✓.zip');
+      });
+
       server = app.listen(8383)
     })
 
@@ -36,7 +43,7 @@ function testExpressVersion(version) {
         request
           .get('http://127.0.0.1:8383/test/1')
           .end(function(err, res) {
-            expect(res.headers['content-type']).to.match(/^application\/zip/);
+            expect(res.headers['content-type']).to.equal("application/zip");
             done();
           });
       });
@@ -45,7 +52,7 @@ function testExpressVersion(version) {
         request
           .get('http://127.0.0.1:8383/test/1')
           .end(function(err, res) {
-            expect(res.headers['content-disposition']).to.match(/^attachment; filename="attachment.zip"/);
+            expect(res.headers['content-disposition']).to.equal("attachment; filename=\"attachment.zip\";");
             done();
           });
       });
@@ -54,7 +61,16 @@ function testExpressVersion(version) {
         request
           .get('http://127.0.0.1:8383/test/2')
           .end(function(err, res) {
-            expect(res.headers['content-disposition']).to.match(/^attachment; filename="test2.zip"/);
+            expect(res.headers['content-disposition']).to.equal("attachment; filename=\"test2.zip\";");
+            done();
+          });
+      });
+
+      it('filename is ascii, filename* encodes UTF8', function(done) {
+        request
+          .get('http://127.0.0.1:8383/test/3')
+          .end(function(err, res) {
+            expect(res.headers['content-disposition']).to.equal("attachment; filename=\"unicode.zip\"; filename*=UTF-8''unicode%E2%9C%93.zip");
             done();
           });
       });
