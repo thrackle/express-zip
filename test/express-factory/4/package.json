@@ -1,5 +1,5 @@
 {
-  "name": "express3-factory",
+  "name": "express4-factory",
   "dependencies": {
     "express": "4"
   }
