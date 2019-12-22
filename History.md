@@ -1,3 +1,9 @@
+3.0.0 / 2019-12-21
+==================
+
+  * Support the officially supported versions of node (10, 12, and 13); drop support for old versions
+  * Bump dependencies to eliminate vulnerable packages
+
 2.0.2 / 2019-12-21
 ==================
 
